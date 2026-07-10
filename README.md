@@ -1,32 +1,48 @@
-# React + TypeScript + Vite
+# LoanEase - Multi-Step Loan Application Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Live Demo:** [https://pro1-pied.vercel.app](https://pro1-pied.vercel.app)
 
-Currently, two official plugins are available:
+## About the Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+LoanEase is a production-grade, 8+ step multi-step loan application platform built as part of a Web Development Internship at Zetheta Algorithms Private Limited. It is designed to replace tedious, static application forms with a dynamic, highly interactive, and fault-tolerant user experience. By guiding the user through bite-sized, logical steps, the system reduces cognitive load and application abandonment rates. 
 
-## React Compiler
+The system dynamically adapts its questions based on user input, ensuring that business owners see different fields than salaried employees, and home loan applicants provide different details than personal loan seekers.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Key Features
 
-## Expanding the Oxlint configuration
+- **Dynamic Form Wizard:** An 8-step flow (Loan Type, Personal Info, Address, Employment, Co-Applicant, Identity, Documents, Review).
+- **Premium UI/UX:** "Liquid Glass" design system utilizing Tailwind CSS and smooth micro-animations powered by Framer Motion.
+- **Auto-Save & Resume:** Utilizes `localStorage` and Zustand persistence to automatically save user progress, allowing them to drop off and resume exactly where they left off.
+- **Real-Time Validation:** Immediate visual feedback on input errors using strict Zod schemas and React Hook Form.
+- **Conditional Logic:** Automatically forces a co-applicant if the calculated EMI exceeds 40% of the user's declared monthly income.
+- **Simulated Gateways:** Features mock interactive OTP gateways for PAN/Aadhaar verification.
+- **Document Management:** Drag-and-drop file upload interface with visual upload statuses.
+- **Pre-Approval Dashboard:** Generates a detailed pre-approval summary with interactive amortization charts upon completion.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Tech Stack
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+- **Frontend:** React 18 (Vite)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **State Management:** Zustand
+- **Form Handling:** React Hook Form
+- **Schema Validation:** Zod
+- **Charts:** Recharts
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Running Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/vardhan23v/LoanEase-Multi-Step-Form.git
+   cd LoanEase-Multi-Step-Form
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
